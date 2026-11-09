@@ -22,7 +22,7 @@
       fields.forEach((name, j) => { row[name] = finite(valueRows[i][j]); });
       return row;
     }).filter(row => Number.isFinite(row.time));
-    const station = kind === 'observation' ? (child(doc, 'name')?.textContent.trim() || 'lähin havaintoasema') : '';
+    const station = kind === 'observation' ? (children(doc, 'name').map(x => x.textContent.trim()).find(Boolean) || 'lähin havaintoasema') : '';
     return { rows, station };
   }
 

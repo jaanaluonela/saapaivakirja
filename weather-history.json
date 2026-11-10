@@ -174,5 +174,27 @@
     "rain": 0.0,
     "wind": 17.3,
     "humidity": 90
+  },
+  {
+    "city": "Lahti",
+    "date": "2026-11-09",
+    "temp": "3.3",
+    "weather": "⛅ Puolipilvistä",
+    "notes": "",
+    "automatic": true,
+    "rain": 0.0,
+    "wind": 16.9,
+    "humidity": 87
+  },
+  {
+    "city": "Vääksy",
+    "date": "2026-11-09",
+    "temp": "3.7",
+    "weather": "⛅ Puolipilvistä",
+    "notes": "",
+    "automatic": true,
+    "rain": 0.0,
+    "wind": 22.3,
+    "humidity": 87
   }
 ]

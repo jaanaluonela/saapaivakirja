@@ -81,7 +81,7 @@ const params=new URLSearchParams({latitude:String(coords[0]),longitude:String(co
 try{const response=await fetch('https://archive-api.open-meteo.com/v1/archive?'+params);if(!response.ok)throw Error('Hakua ei voitu tehdä');const json=await response.json();if(!json.daily?.time?.length)throw Error('Ei historiatietoa');return {year,own,d:json.daily}}catch{return {year,own,error:'Historiatiedon haku epäonnistui'}}
 }));
 if(id!==compareRequest)return;
-const diaryNote=own=>own?.notes?.trim()?'<div class="compare-diary"><strong>✎ Oma päiväkirjamerkintä</strong><p>'+esc(own.notes)+'</p></div>':'';
+const diaryNote=own=>own?.notes?.trim()?'<div class="compare-diary"><strong>✎ Oma merkintä</strong><p>'+esc(own.notes)+'</p></div>':'';
 const fmt=(v,unit)=>Number.isFinite(v)?v.toLocaleString('fi-FI',{minimumFractionDigits:1,maximumFractionDigits:1})+unit:'–';
 const codeName=c=>c===0?'☀️ Selkeää':c<=3?'☁️ Pilvistä':c===45||c===48?'🌫️ Sumua':c>=71&&c<=77||c>=85&&c<=86?'❄️ Lumisadetta':c>=95?'⛈️ Ukkosta':c>=51?'🌧️ Sadetta':'–';
 el.innerHTML='<strong>'+esc(city)+' · '+String(day).padStart(2,'0')+'.'+String(month).padStart(2,'0')+'.</strong>'+result.map(({year,own,d,error})=>{

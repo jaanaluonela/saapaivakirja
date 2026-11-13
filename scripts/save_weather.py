@@ -13,7 +13,7 @@ for city, (lat, lon) in places.items():
     url = ("https://api.open-meteo.com/v1/forecast?"
            f"latitude={lat}&longitude={lon}&past_days=7&forecast_days=1"
            "&daily=temperature_2m_mean,weather_code,precipitation_sum,"
-           "wind_speed_10m_max,relative_humidity_2m_mean"
+           "wind_speed_10m_max"
            "&timezone=Europe%2FHelsinki")
     with urllib.request.urlopen(url, timeout=30) as response:
         daily = json.load(response)["daily"]
@@ -31,8 +31,13 @@ for city, (lat, lon) in places.items():
                  "weather": condition, "notes": "", "automatic": True,
                  "rain": daily["precipitation_sum"][i],
                  "wind": daily["wind_speed_10m_max"][i],
-                 "humidity": daily["relative_humidity_2m_mean"][i]}
-        history = [old for old in history if not (old["city"] == city and old["date"] == day)]
+                 "humidity": None}
+        existing = next((old for old in history if old.get("city") == city and old.get("date") == day), None)
+        if existing:
+            entry["notes"] = existing.get("notes", "")
+            if existing.get("humidity") is not None:
+                entry["humidity"] = existing["humidity"]
+        history = [old for old in history if not (old.get("city") == city and old.get("date") == day)]
         history.append(entry)
 history.sort(key=lambda x: (x["date"], x["city"]))
 path.write_text(json.dumps(history, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

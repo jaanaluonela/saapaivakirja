@@ -240,5 +240,49 @@
     "rain": 2.7,
     "wind": 15.8,
     "humidity": 95
+  },
+  {
+    "city": "Lahti",
+    "date": "2026-11-12",
+    "temp": "3.9",
+    "weather": "🌧️ Sateista",
+    "notes": "",
+    "automatic": true,
+    "rain": 3.1,
+    "wind": 22.0,
+    "humidity": null
+  },
+  {
+    "city": "Vääksy",
+    "date": "2026-11-12",
+    "temp": "4.1",
+    "weather": "🌧️ Sateista",
+    "notes": "",
+    "automatic": true,
+    "rain": 3.3,
+    "wind": 25.2,
+    "humidity": null
+  },
+  {
+    "city": "Lahti",
+    "date": "2026-11-13",
+    "temp": "1.8",
+    "weather": "🌧️ Sateista",
+    "notes": "",
+    "automatic": true,
+    "rain": 10.0,
+    "wind": 27.7,
+    "humidity": null
+  },
+  {
+    "city": "Vääksy",
+    "date": "2026-11-13",
+    "temp": "2.0",
+    "weather": "🌧️ Sateista",
+    "notes": "",
+    "automatic": true,
+    "rain": 7.5,
+    "wind": 28.8,
+    "humidity": null
   }
 ]

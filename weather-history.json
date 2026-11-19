@@ -372,5 +372,27 @@
     "rain": 9.2,
     "wind": 22.0,
     "humidity": null
+  },
+  {
+    "city": "Lahti",
+    "date": "2026-11-18",
+    "temp": "4.5",
+    "weather": "🌧️ Sateista",
+    "notes": "",
+    "automatic": true,
+    "rain": 4.7,
+    "wind": 18.7,
+    "humidity": null
+  },
+  {
+    "city": "Vääksy",
+    "date": "2026-11-18",
+    "temp": "4.5",
+    "weather": "🌧️ Sateista",
+    "notes": "",
+    "automatic": true,
+    "rain": 4.4,
+    "wind": 21.6,
+    "humidity": null
   }
 ]

@@ -482,5 +482,27 @@
     "rain": 3.3,
     "wind": 26.3,
     "humidity": null
+  },
+  {
+    "city": "Lahti",
+    "date": "2026-11-23",
+    "temp": "0.4",
+    "weather": "❄️ Lumisadetta",
+    "notes": "",
+    "automatic": true,
+    "rain": 5.9,
+    "wind": 27.4,
+    "humidity": null
+  },
+  {
+    "city": "Vääksy",
+    "date": "2026-11-23",
+    "temp": "0.9",
+    "weather": "❄️ Lumisadetta",
+    "notes": "",
+    "automatic": true,
+    "rain": 4.6,
+    "wind": 32.8,
+    "humidity": null
   }
 ]
